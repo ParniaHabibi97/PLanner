@@ -202,9 +202,10 @@ body {
   max-width: 700px;
   height: 40px;
   padding: 10px;
-  /* text-align: center; */
   border: 2px solid white;
   border-radius: 5px;
+  color: #fff;
+  font-size: 21px;
   }
 
 
