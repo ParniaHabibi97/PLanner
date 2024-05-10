@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<header>
-  <nav class="navbar">
+
+  <nav class="navbar-nav">
     <div class="navbar-left">
       <ul>
         <li><a href="#">Themes</a></li>
@@ -28,9 +28,9 @@
       </ul>
     </div>
   </nav>
-</header>
 
-<main>
+
+
     <div class="container">
     <div class="checklist">
         <div class="checklist-item">
@@ -89,10 +89,24 @@
           <input type="text" id="text5" class="task-input">
         </div>
       </div>
+      <div class="timer-container">
+      <div class="timer">
+        <div class="timer-display" id="timer-display">00:00</div>
+        <div class="timer-controls">
+          <input type="number" id="minutes" placeholder="Minutes">
+          <input type="number" id="seconds" placeholder="Seconds">
+          <button onclick="startTimer()">Start</button>
+          <button onclick="resetTimer()">Reset</button>
+        </div>
+      </div>
     </div>
-    </main>
+    </div>
     
+  
+
+ 
     
+    <script src="script.js"></script>
 
 </body>
 </html>

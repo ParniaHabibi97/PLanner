@@ -3,38 +3,38 @@ body {
     font-family: Arial, sans-serif;
   }
   
-  header {
-    background-color: #000e3fe6;
-    color: #fff;
-  }
-  .navbar-middle:hover,:focus{
+
+  .navbar-middle:hover{
     color: #008cff;
     text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
  }
   
-  .navbar {
+  .navbar-nav {
     display: flex;
+    position: sticky;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    background-color: #000e3fe6;
+    color: #ffffff;
   }
   
-  .navbar ul {
+  .navbar-nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
   
-  .navbar ul li {
+  .navbar-nav ul li {
     display: inline;
     margin-right: 20px;
   }
   
-  .navbar ul li:last-child {
+  .navbar-nav ul li:last-child {
     margin-right: 0;
   }
   
-  .navbar a {
+  .navbar-nav a {
     color: #fff;
     text-decoration: none;
     padding: 8px 12px;
@@ -44,13 +44,13 @@ body {
     font-size: 17px;
   }
   
-  .navbar a:hover {
+  .navbar-nav a:hover {
     transform: perspective(100px) rotateX(10deg);
     border-color: transparent;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   }
 
-  .navbar a:hover,:focus{
+  .navbar-nav a:hover{
     color: #ffffff;
   background: #008cff;
   border: 1px solid #008cff;
@@ -60,7 +60,8 @@ body {
     cursor: pointer;
   }
   
-  .navbar h1 {
+
+  .navbar-nav h1 {
     margin: 0;
     font-weight: bold;
     font-size: 24px;
@@ -72,11 +73,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: fit-content;
+    width: 100%;
     
   }
   .checklist {
-    margin-top: 20px;
+    margin-top: 49px;
+    margin-right: 21px;
+    margin-left: 21px;
   }
   
   .checklist-item {
@@ -224,7 +228,7 @@ body {
   /* Style the custom checkboxes */
   .checklist-item input[type="text"] {
     position: relative;
-    width: 700px;
+    width: 490px;
   }
   
   .checklist-item input[type="text"]:before {
@@ -240,3 +244,51 @@ body {
     cursor: pointer;
   }
   
+
+  .timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    width: fit-content;
+    float: right;
+    background-color: #bfe2ffe7;
+    border-radius: 17px;
+
+  }
+  
+  .timer {
+    text-align: center;
+    width: 470px;
+  }
+  
+  .timer-display {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .timer-controls input {
+    width: 80px;
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 17px;
+  }
+  
+  .timer-controls button {
+    padding: 8px 20px;
+    background-color: #2891dccc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .timer-controls button:hover {
+    color: #ffffff;
+    background: #008cff;
+    border: 1px solid #008cffb7;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 10px #ffffff;
+    box-shadow: 0 0 5px #008cffb7, 0 0 10px #008cffb7, 0 0 10px #008cffb7,
+      0 0 10px #008cffb7;
+      cursor: pointer;
+  }

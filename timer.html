@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="timerstyle.css">
+    <script src="timer.js"></script>
+</head>
+<body>
+    <div id="app" v-cloak>
+	<h1>Timer</h1>
+	<timer-setup v-if="!time" @set-time="setTime"></timer-setup>
+	 <div v-else>
+		 <timer :time="prettyTime"></timer>
+		 <div>
+			  <button v-if="!isRunning" @click="start">Start</button>
+			  <button v-if="isRunning" @click="stop">Stop</button>
+			  <button @click="reset">Reset</button>
+		 </div>
+	</div>       
+</div>
+</body>
+</html>
+
