@@ -82,6 +82,12 @@ body {
     margin-right: 21px;
     margin-left: 21px;
   }
+  .h1-checklist{
+    font-family: Arial, sans-serif;
+    color: #001892;
+    text-align: center;
+  }
+ 
   
   .checklist-item {
     display: flex;
@@ -249,17 +255,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 270px;
+    height: 370px;
     width: fit-content;
     float: right;
-    background-color: #bfe2ffe7;
-    border-radius: 17px;
+  }
+  .h1-timer{
+    font-family:Arial, sans-serif;
+    color: #001892;
+    text-align: center;
+    position: fixed;
+    top: 107px;
 
   }
   
   .timer {
     text-align: center;
     width: 470px;
+    background-color: #bfe2ffe7;
+    padding: 57px;
+    border-radius: 17px;
   }
   
   .timer-display {
