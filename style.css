@@ -69,6 +69,58 @@ body {
     letter-spacing: 2px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   }
+
+
+  
+  .container2 {
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #day, #date {
+    text-align: center;
+    box-sizing: border-box;
+    height: 157px;
+    width: 214px;
+    border-radius: 17px;
+    border: 10px solid #bfe2ffe7;
+    box-shadow: 2px 2px 2px #324376, -2px 2px 2px #324376, -2px -2px 2px #324376, 2px -2px 2px #324376;
+    margin-top: 17px;
+  }
+  
+  #day {
+    background: #bfe2ffe7;
+    color: #001892;
+    font-size: 21px;
+    font-weight: 900;
+    padding-top: 44px;
+  }
+  
+  #day span {
+    display: block;
+    font-weight: 700;
+    font-size: 21px;
+  }
+  
+  #date {
+    padding-top: 14px;
+    color: #001892;
+    background: #bfe2ffe7;
+    font-size: 21px;
+    font-weight: 900;
+    font-family: Arial, sans-serif;
+  }
+  
+  #date span {
+    display: block;
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 45px;
+    padding-bottom: 9px;
+  }
+
   .container {
     display: flex;
     justify-content: center;
@@ -258,21 +310,21 @@ body {
     height: 370px;
     width: fit-content;
     float: right;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
   .h1-timer{
     font-family:Arial, sans-serif;
     color: #001892;
     text-align: center;
-    position: fixed;
-    top: 107px;
-
+    margin-top: 1.7px;
   }
   
   .timer {
     text-align: center;
     width: 470px;
     background-color: #bfe2ffe7;
-    padding: 57px;
+    padding: 27px;
     border-radius: 17px;
   }
   
@@ -306,3 +358,34 @@ body {
       0 0 10px #008cffb7;
       cursor: pointer;
   }
+
+  .notes{
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #bfe2ffe7;
+    box-shadow: 20px 20px 60px #008cffb7,
+		-20px -20px 60px #ffffff;
+    transition: 0.3s;
+    width: 457px;
+    height: 157px;
+    margin-top: 17px;
+    resize: none; /* Prevent resizing */
+    overflow: hidden; /* Hide overflow */
+    white-space: pre-wrap; /* Wrap lines */
+    overflow-wrap: break-word; /* Break words if necessary */
+    font-size: 17px;
+    color: #001892;
+  }
+
+  .notes:focus{
+    outline-color: #bfe2ffe7;
+    background: #bfe2ffe7;
+    box-shadow: inset 20px 20px 60px #008cffb7,
+		inset -20px -20px 60px #ffffff;
+    transition: 0.3s;
+  }
+
+  .notes::placeholder {
+    color: #001892; /* Change the color to your desired color */
+}

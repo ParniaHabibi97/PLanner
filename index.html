@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Planner</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" 
 </head>
 <body>
 
@@ -29,7 +31,10 @@
     </div>
   </nav>
 
-
+  <div class="container2">
+    <div id="day"></div>
+    <div id="date"></div>
+  </div>
 
     <div class="container">
     <div class="checklist">
@@ -93,7 +98,7 @@
       
       <div class="timer-container">
         <h1 class="h1-timer">timer:</h1>
-      <div class="timer">
+        <div class="timer">
         <div class="timer-display" id="timer-display">00:00</div>
         <div class="timer-controls">
           <input type="number" id="minutes" placeholder="Minutes">
@@ -101,14 +106,12 @@
           <button onclick="startTimer()">Start</button>
           <button onclick="resetTimer()">Reset</button>
         </div>
-      </div>
-    </div>
+        </div>
+        <div><textarea class="notes" placeholder="Write your note here..."></textarea></div>
+        </div>
     </div>
     
-  
-
- 
-    
+    <script src="calendar.js"></script>
     <script src="script.js"></script>
 
 </body>
