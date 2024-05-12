@@ -1,3 +1,28 @@
+function takeScreenshot() {
+  // Capture the entire document
+  html2canvas(document.body).then(function(canvas) {
+      // Convert canvas to image
+      var image = canvas.toDataURL("image/png");
+
+      // Create a temporary link
+      var link = document.createElement("a");
+      link.href = image;
+      link.download = "screenshot.png";
+
+      // Trigger the download
+      document.body.appendChild(link);
+      link.click();
+
+      // Clean up
+      document.body.removeChild(link);
+  });
+}
+
+
+
+
+
+
 var timerInterval; // Declare timerInterval globally to use it in both startTimer and resetTimer functions
 
 function startTimer() {

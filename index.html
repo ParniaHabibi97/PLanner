@@ -6,7 +6,10 @@
   <title>Planner</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,900i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" 
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+
 </head>
 <body>
 
@@ -22,7 +25,7 @@
             <li><a href="#">Green</a></li>
           </ul>
         </li>
-        <li><a href="#">Tasks</a></li>
+        <li><a href="#" onclick="takeScreenshot()">Save</a></li>
         <li><a href="calendar.html">Calendar</a></li>
       </ul>
     </div>
@@ -117,9 +120,10 @@
         <div><textarea class="notes" placeholder="Write your note here..."></textarea></div>
         </div>
     </div>
-    
+   
     <script src="calendar.js"></script>
     <script src="script.js"></script>
+    
 
 </body>
 </html>
