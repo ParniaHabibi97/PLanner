@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scheduler</title>
+  <link rel="stylesheet" href="schedulestyle.css">
+</head>
+<body>
+ <div class="container">
+<div class="scheduler">
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Activity</th>
+        <th>Details</th>
+        <th>Feedback</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>6:00 AM - 8:00 AM</td>
+        <td class="activity" contenteditable="true"></td>
+        <td class="details" contenteditable="true"></td>
+        <td class="feedback" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td>8:00 AM - 10:00 AM</td>
+        <td class="activity" contenteditable="true"></td>
+        <td class="details" contenteditable="true"></td>
+        <td class="feedback" contenteditable="true"></td>
+      </tr>
+      <!-- Add more rows for other time intervals -->
+    </tbody>
+  </table>
+</div>
+
+
+<div class="sidebar">
+    <div class="sticker" draggable="true">Sticker 1</div>
+    <div class="sticker" draggable="true">Sticker 2</div>
+</div>
+</div>
+
+<script src="schedule.js"></script>
+</body>
+</html>
