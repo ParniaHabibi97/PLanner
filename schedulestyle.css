@@ -61,6 +61,11 @@
     background-color: #00189221;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-height: 657px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
   }
   
   .sticker {
@@ -77,7 +82,27 @@
   .sticker {
     width: 57px; 
     height: auto;
+    position: relative;
+  }
+  .sticker:hover::after {
+    content: attr(title); /* Show the content of the title attribute */
+    position: absolute;
+    bottom: calc(100% + 5px); /* Position tooltip above the sticker */
+    left: 50%; /* Center the tooltip horizontally */
+    transform: translateX(-50%);
+    background-color: #000; /* Background color of the tooltip */
+    color: #fff; /* Text color of the tooltip */
+    padding: 8px 12px; /* Add padding to the tooltip */
+    border-radius: 5px; /* Add border radius to the tooltip */
+    font-size: 14px; /* Font size of the tooltip */
+    white-space: nowrap; /* Prevent text from wrapping */
+    z-index: 999; /* Ensure the tooltip appears above other elements */
+    opacity: 0; /* Initially hide the tooltip */
+    transition: opacity 0.3s ease; /* Add transition for smoother appearance */
   }
   
+  .sticker:hover::after {
+    opacity: 1; /* Show the tooltip on hover */
+  }
   
   
