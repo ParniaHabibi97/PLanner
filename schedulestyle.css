@@ -1,5 +1,5 @@
 .scheduler {
-    margin: 20px auto;
+    margin: 17px auto;
     font-family: Arial, sans-serif;
   }
   
@@ -12,7 +12,7 @@
   }
   
   thead {
-    background-color: #4CAF50;
+    background-color: #001892a7;
     color: white;
   }
   
@@ -31,21 +31,22 @@
   }
   
   tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #00189221;
   }
   
   tbody tr:hover {
-    background-color: #ddd;
+    background-color: #00189249;
   }
   
-  .activity, .details, .feedback {
+  .activity {
     min-width: 150px;
     max-width: 300px;
-    word-wrap: break-word;
+    
   }
-  .activity img{
-    width: 49px; 
+  .activity img {
+    width: 57px; 
     height: auto;
+    word-wrap: break-word;
   }
   .container {
     display: flex;
@@ -54,8 +55,10 @@
   
   .sidebar {
     width: 200px;
-    padding: 20px;
-    background-color: #f2f2f2;
+    padding: 14px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    background-color: #00189221;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
@@ -63,18 +66,18 @@
   .sticker {
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #4CAF50;
     color: white;
     cursor: pointer;
   }
   
   .sticker:hover {
-    background-color: #45a049;
+    transform: scale(1.2); 
   }
 
   .sticker {
-    width: 49px; 
+    width: 57px; 
     height: auto;
   }
+  
   
   
