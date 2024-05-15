@@ -43,7 +43,10 @@
     max-width: 300px;
     word-wrap: break-word;
   }
-  
+  .activity img{
+    width: 49px; 
+    height: auto;
+  }
   .container {
     display: flex;
     justify-content: space-between;
@@ -68,4 +71,10 @@
   .sticker:hover {
     background-color: #45a049;
   }
+
+  .sticker {
+    width: 49px; 
+    height: auto;
+  }
+  
   
