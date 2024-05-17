@@ -1,22 +1,28 @@
-function takeScreenshot() {
-  // Capture the entire document
-  html2canvas(document.body).then(function(canvas) {
-      // Convert canvas to image
-      var image = canvas.toDataURL("image/png");
+document.getElementById('export-pdf').addEventListener('click', function() {
+  html2canvas(document.body, {
+    onrendered: function(canvas) {
+      var imgData = canvas.toDataURL('image/png');
+      var pdf = new jsPDF('p', 'mm', 'a4');
+      var imgWidth = 210; 
+      var pageHeight = 295;  
+      var imgHeight = canvas.height * imgWidth / canvas.width;
+      var heightLeft = imgHeight;
 
-      // Create a temporary link
-      var link = document.createElement("a");
-      link.href = image;
-      link.download = "screenshot.png";
+      var position = 0;
 
-      // Trigger the download
-      document.body.appendChild(link);
-      link.click();
+      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
 
-      // Clean up
-      document.body.removeChild(link);
+      while (heightLeft >= 0) {
+        position = heightLeft - imgHeight;
+        pdf.addPage();
+        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
+      }
+      pdf.save('planner.pdf');
+    }
   });
-}
+});
 
 
 

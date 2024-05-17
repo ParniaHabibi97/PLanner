@@ -27,3 +27,28 @@ activityCells.forEach(cell => {
 });
 
 
+document.getElementById('export-pdf').addEventListener('click', function() {
+  html2canvas(document.body, {
+    onrendered: function(canvas) {
+      var imgData = canvas.toDataURL('image/png');
+      var pdf = new jsPDF('p', 'mm', 'a4');
+      var imgWidth = 210; 
+      var pageHeight = 295;  
+      var imgHeight = canvas.height * imgWidth / canvas.width;
+      var heightLeft = imgHeight;
+
+      var position = 0;
+
+      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
+
+      while (heightLeft >= 0) {
+        position = heightLeft - imgHeight;
+        pdf.addPage();
+        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
+      }
+      pdf.save('planner.pdf');
+    }
+  });
+});
