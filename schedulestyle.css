@@ -212,5 +212,34 @@ transition: all 0.3s ease;
   .sticker:hover::after {
     opacity: 1; /* Show the tooltip on hover */
   }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .sidebar {
+      width: 200px;
+      padding: 14px;
+      margin-top: 3.7px;
+      margin-bottom: 14px;
+      background-color: #021c9cbe;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      max-height: 657px;
+      display: flex;
+      flex-direction: row;
+      overflow-y: auto;
+    }
+  
+    .sticker {
+      width: 100%; /* Make stickers full-width */
+    }
+  
+    .scheduler {
+      overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    }
+  }
   
   
