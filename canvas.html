@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawing App</title>
+  <link rel="stylesheet" href="canvasstyle.css">
+</head>
+<body>
+    <div class="navbar"></div>
+    <nav class="navbar-nav">
+        <div class="navbar-left">
+          <ul>
+            <li><a href="#">Themes</a>
+              <ul class="dropdown">
+                <li><a href="#">Blue</a></li>
+                <li><a href="#">Purple</a></li>
+                <li><a href="#">Pink</a></li>
+                <li><a href="#">Green</a></li>
+              </ul>
+            </li>
+            <li><a href="#" id="export-pdf">Save</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+          </ul>
+        </div>
+        <div class="navbar-middle">
+          <h1>Planner</h1>
+        </div>
+        <div class="navbar-right">
+          <ul>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="index.html">Planner</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="tool-options">
+        <label for="color-picker">Color:</label>
+        <input type="color" id="color-picker" value="#000000">
+        <label for="size-picker">Size:</label>
+        <input type="range" id="size-picker" min="1" max="50" value="5">
+      </div>
+      <button id="pen" class="tool-button">Pen</button>
+      <button id="marker" class="tool-button">Marker</button>
+      <button id="eraser" class="tool-button">Eraser</button>
+      <button id="reset" class="tool-button">Reset</button>
+    </div>
+    <canvas id="drawing-canvas"></canvas>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+  <script src="canvas.js"></script>
+</body>
+</html>
