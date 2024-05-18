@@ -8,124 +8,113 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,900i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-
-
 </head>
 <body>
 
+<nav class="navbar-nav">
+  <div class="navbar-left">
+    <button class="hamburger-menu" onclick="toggleMenu()">&#9776;</button>
+    <ul class="navbar-items">
+      <li><a href="#">Themes</a>
+        <ul class="dropdown">
+          <li><a href="#">Blue</a></li>
+          <li><a href="#">Purple</a></li>
+          <li><a href="#">Pink</a></li>
+          <li><a href="#">Green</a></li>
+        </ul>
+      </li>
+      <li><a href="#" id="export-pdf">Save</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+    </ul>
+  </div>
+  <div class="navbar-middle">
+    <h1>Planner</h1>
+  </div>
+  <div class="navbar-right">
+    <ul class="navbar-items">
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="canvas.html">Canvas</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <nav class="navbar-nav">
-    <div class="navbar-left">
-      <ul>
-        <li><a href="#">Themes</a>
-          <ul class="dropdown">
-            <li><a href="#">Blue</a></li>
-            <li><a href="#">Purple</a></li>
-            <li><a href="#">Pink</a></li>
-            <li><a href="#">Green</a></li>
-          </ul>
-        </li>
-        <li><a href="#" id="export-pdf">Save</a></li>
-        <li><a href="calendar.html">Calendar</a></li>
-      </ul>
-    </div>
-    <div class="navbar-middle">
-      <h1>Planner</h1>
-    </div>
-    <div class="navbar-right">
-      <ul>
-        <li><a href="schedule.html">Schedule</a></li>
-        <li><a href="canvas.html">Canvas</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>
-    </div>
-  </nav>
+<div class="container2">
+  <div id="day"></div>
+  <div id="date"></div>
+</div>
 
-  <div class="container2">
-    <div id="day"></div>
-    <div id="date"></div>
+<div class="container">
+  <div class="checklist">
+    <h1 class="h1-checklist">Write your plans here:</h1>
+    <div class="checklist-item">
+      <div class="checkbox-wrapper">
+        <input id="_checkbox-26" type="checkbox">
+        <label for="_checkbox-26">
+          <div class="tick_mark"></div>
+        </label>
+      </div>
+      <input type="text" id="text1" class="task-input">
+    </div>
+    <div class="checklist-item">
+      <div class="checkbox-wrapper">
+        <input id="_checkbox-27" type="checkbox">
+        <label for="_checkbox-27">
+          <div class="tick_mark"></div>
+        </label>
+      </div>
+      <input type="text" id="text2" class="task-input">
+    </div>
+    <div class="checklist-item">
+      <div class="checkbox-wrapper">
+        <input id="_checkbox-28" type="checkbox">
+        <label for="_checkbox-28">
+          <div class="tick_mark"></div>
+        </label>
+      </div>
+      <input type="text" id="text3" class="task-input">
+    </div>
+    <div class="checklist-item">
+      <div class="checkbox-wrapper">
+        <input id="_checkbox-29" type="checkbox">
+        <label for="_checkbox-29">
+          <div class="tick_mark"></div>
+        </label>
+      </div>
+      <input type="text" id="text4" class="task-input">
+    </div>
+    <div class="checklist-item">
+      <div class="checkbox-wrapper">
+        <input id="_checkbox-30" type="checkbox">
+        <label for="_checkbox-30">
+          <div class="tick_mark"></div>
+        </label>
+      </div>
+      <input type="text" id="text5" class="task-input">
+    </div>
   </div>
 
-    <div class="container">
-    <div class="checklist">
-      <h1 class="h1-checklist">write your plans here:</h1>
-        <div class="checklist-item">
-            <div class="checkbox-wrapper">
-                <input id="_checkbox-26" type="checkbox">
-                <label for="_checkbox-26">
-                  <div class="tick_mark"></div>
-                </label>
-              </div>
-              
-              
-          <input type="text" id="text1" class="task-input">
-        </div>
-        <div class="checklist-item">
-            <div class="checkbox-wrapper">
-                <input id="_checkbox-27" type="checkbox">
-                <label for="_checkbox-27">
-                  <div class="tick_mark"></div>
-                </label>
-              </div>
-              
-              
-          <input type="text" id="text2" class="task-input">
-        </div>
-        <div class="checklist-item">
-            <div class="checkbox-wrapper">
-                <input id="_checkbox-28" type="checkbox">
-                <label for="_checkbox-28">
-                  <div class="tick_mark"></div>
-                </label>
-              </div>
-              
-              
-          <input type="text" id="text3" class="task-input">
-        </div>
-        <div class="checklist-item">
-            <div class="checkbox-wrapper">
-                <input id="_checkbox-29" type="checkbox">
-                <label for="_checkbox-29">
-                  <div class="tick_mark"></div>
-                </label>
-              </div>
-              
-              
-          <input type="text" id="text4" class="task-input">
-        </div>
-        <div class="checklist-item">
-            <div class="checkbox-wrapper">
-                <input id="_checkbox-30" type="checkbox">
-                <label for="_checkbox-30">
-                  <div class="tick_mark"></div>
-                </label>
-              </div>
-              
-              
-          <input type="text" id="text5" class="task-input">
-        </div>
+  <div class="timer-container">
+    <h1 class="h1-timer">Timer:</h1>
+    <div class="timer">
+      <div class="timer-display" id="timer-display">00:00</div>
+      <div class="timer-controls">
+        <input type="number" id="minutes" placeholder="Minutes">
+        <input type="number" id="seconds" placeholder="Seconds">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="resetTimer()">Reset</button>
       </div>
-      
-      <div class="timer-container">
-        <h1 class="h1-timer">timer:</h1>
-        <div class="timer">
-        <div class="timer-display" id="timer-display">00:00</div>
-        <div class="timer-controls">
-          <input type="number" id="minutes" placeholder="Minutes">
-          <input type="number" id="seconds" placeholder="Seconds">
-          <button onclick="startTimer()">Start</button>
-          <button onclick="resetTimer()">Reset</button>
-        </div>
-        </div>
-        <div><textarea class="notes" placeholder="Write your note here..."></textarea></div>
-        </div>
     </div>
-   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
-    <script src="calendar.js"></script>
-    <script src="script.js"></script>
-    
+    <div>
+      <textarea class="notes" placeholder="Write your note here..."></textarea>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+<script src="calendar.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>

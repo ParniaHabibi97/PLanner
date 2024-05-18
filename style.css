@@ -25,12 +25,14 @@ body {
     padding: 10px 20px;
     background-color: #000e3fe6;
     color: #ffffff;
+    flex-wrap: wrap;
   }
   
   .navbar-nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
   }
   
   .navbar-nav ul li {
@@ -435,4 +437,73 @@ body {
 
   .notes::placeholder {
     color: #001892; /* Change the color to your desired color */
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-nav ul li {
+    margin-right: 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .show-menu {
+    display: flex !important;
+  }
+  .container2 {
+    align-items: center;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+
+  #day, #date {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+  }
+
+  .checklist {
+      width: 100%;
+      margin: 0 10px;
+  }
+
+  .timer-container {
+      width: 100%;
+      margin: 20px 0;
+  }
+
+  .timer {
+      width: 90%;
+  }
+
+  .notes {
+      width: 90%;
+      height: 100px;
+  }
 }

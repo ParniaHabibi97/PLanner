@@ -25,6 +25,11 @@ document.getElementById('export-pdf').addEventListener('click', function() {
 });
 
 
+function toggleMenu() {
+  const navItems = document.querySelectorAll('.navbar-items');
+  navItems.forEach(item => item.classList.toggle('show-menu'));
+}
+
 
 
 
