@@ -1,1 +1,1 @@
-# PLanner
+This web application is a comprehensive planner designed to enhance productivity and organization. Users can create and manage to-do lists, set timers for efficient time management, and jot down notes quickly and conveniently. The application also features a customizable table with a variety of stickers to visually organize daily tasks, and a canvas for painting, drawing, or writing. The user-friendly interface makes it easy to stay on top of tasks and priorities.
